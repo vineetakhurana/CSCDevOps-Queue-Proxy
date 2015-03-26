@@ -13,6 +13,7 @@ var client = redis.createClient(6379, '127.0.0.1', {})
 var myQueue = new RedisQueue(client);
 
 var x;
+var set_val;
 var visited = [];
 var toSend = [];
 var items = [];
@@ -22,16 +23,25 @@ var display = [];
 
 //set and get
 
-client.set("one", "vineeta");
-client.get("one", function(err,value){ console.log(value)});
-client.set("two","this message will self-destruct in 10 seconds");
-client.expire("two",10);
-client.get("two", function(err,value){ x = value;
- console.log(value);
-});
+//step 1: set and get "one"
+// client.set("one", "vineeta");
+// client.get("one", function(err,value){ console.log(value);
+// set_val = value;
+// });
+
+//step 2: set and get the message
+//client.set("two","this message will self-destruct in 10 seconds");
+//step 3: expire this message and get
+// client.expire("two",10);
+// client.get("two", function(err,value){ set_val = value;
+//  console.log(value);
+// });
 
 
 ///////////// WEB ROUTES
+
+
+//step 4: do lpush , lrange to get last 5 visited pages
 
 // Add hook to make it easier to get all visited URLS.
 app.use(function(req, res, next) 
@@ -62,6 +72,13 @@ app.get('/recent', function(req, res) {
   
 })
 
+app.get('/get',function(req,res){
+
+	res.send(set_val)
+})
+
+//step 5: upload images using curl command
+//step 6: push the images to a queue 
 
 app.post('/upload',[ multer({ dest: './uploads/'}), function(req, res){
    //console.log(req.body) // form fields
@@ -102,6 +119,8 @@ app.post('/upload',[ multer({ dest: './uploads/'}), function(req, res){
    res.status(204).end()
 }]);
 
+
+//step 7: pop the most recent image and display on /meow
  app.get('/meow', function(req, res) {
 // 	if( req.files.image )
    {
@@ -153,6 +172,7 @@ app.post('/upload',[ multer({ dest: './uploads/'}), function(req, res){
 
 	app.get('/', function(req, res) {
   	res.send('hello world')
+  	res.send(set_val)
 })
 
 
