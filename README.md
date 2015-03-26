@@ -1,4 +1,4 @@
-The application runs on localhost:3002
+The application main.js runs on localhost:3002
 
 ##GET and SET
 
