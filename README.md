@@ -86,7 +86,7 @@ Hence the requests to localhost are redirected to *localhost:3001* and *localhos
 [curl]: /images/curl.PNG
 [meow]: /images/meow.PNG
 [meow2]: /images/meow2.PNG
-[additional]: /images/additionalinstance.PNG
+[additional]: /images/additonalinstance.PNG
 [3001]: /images/3001.PNG
 [proxy]: /images/proxy.PNG
 [proxy2]: /images/proxy_console.PNG
