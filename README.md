@@ -1,4 +1,4 @@
-The application main.js runs on localhost:3002
+The application **main.js** runs on **localhost:3002**
 
 ##GET and SET
 
@@ -40,7 +40,7 @@ Use of 'rpush' to push all the images uploaded to a queue.
 
 ##Additional service instance running
 
-I have another server instance running on port 3001 accessible using localhost:3001. 
+I have another server instance running on port 3001 accessible using **localhost:3001**. 
 
-I replicated the functionality of main.js in additional_main.js and set the server to run on port 3001.
+I replicated the functionality of main.js in **additional_main.js** and set the server to run on port 3001.
 
