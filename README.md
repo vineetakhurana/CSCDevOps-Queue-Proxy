@@ -49,7 +49,7 @@ Use of 'rpush' to push all the images uploaded to a queue.
 
 'lrange' command used to access the recent-most image in the destination queue in order to display the image on accessing *localhost:3002/meow*.
 
-This fetches the most recent image i.e. 'morning.jpg' in the first request to */meow* and later 'i-scream.jpg' for a subsequent request to */meow*.
+This fetches the most recently uploaded image i.e. 'morning.jpg' in the first request to */meow* and later 'i-scream.jpg' for a subsequent request to */meow*.
 
 ![meow] [meow]
 
