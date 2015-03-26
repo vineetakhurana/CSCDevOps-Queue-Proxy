@@ -38,5 +38,6 @@ I replicated the functionality of main.js in **additional_main.js** and set the 
 ###DEMONSTRATE PROXY
 
 **proxy.js**: It has the code for shifting load between localhost:3001 and localhost:3002 when a request is sent to *localhost*
-Hence the requests to localhost are distributed between localhost:3001 and localhost:3002
 
+On each request, obtain target location from the list of addresses and proxy to the relevant server,who is then placed at the end of the list.
+Hence the requests to localhost are redirected to localhost:3001 and localhost:3002 by a simple round-robin load balancing strategy.
