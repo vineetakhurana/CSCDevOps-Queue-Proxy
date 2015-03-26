@@ -33,10 +33,15 @@ Access localhost/get to see the value expired.
 Use of 'lpush' to push the request's URL to a queue and 'lrange' to get the 5 most recently visited URLs on localhost:3002
 Access *localhost:3002/recent* which displays the 5 most recently visited sites.
 
+![recent] [recent]
+
 ##UPLOAD and MEOW
 
 ##upload
 The *curl* command used as per Workshop README to upload an image
+
+![curl] [curl]
+
 Use of 'rpush' to push all the images uploaded to a queue. 
 
 ###meow
@@ -44,10 +49,18 @@ Use of 'rpush' to push all the images uploaded to a queue.
 
 'lrange' command used to access the recent-most image in the destination queue in order to display the image on accessing *localhost:3002/meow*
 
+![meow] [meow]
+
+![meow2] [meow2]
+
 ##ADDITIONAL SERVER INSTANCE RUNNING
 
 I have another server instance running on port 3001 accessible using **localhost:3001**. 
 I replicated the functionality of main.js in **additional_main.js** and set the server to run on port 3001.
+
+![3001] [3001]
+
+![additional] [additional]
 
 ###DEMONSTRATE PROXY
 
@@ -56,6 +69,9 @@ I replicated the functionality of main.js in **additional_main.js** and set the 
 On each request, obtain target location from the list of addresses and proxy to the relevant server,who is then placed at the end of the list.
 Hence the requests to localhost are redirected to *localhost:3001* and *localhost:3002* by a simple round-robin load balancing strategy.
 
+![proxy] [proxy]
+
+![proxy2] [proxy2]
 
 
 [set_one]: /images/get_one.PNG
