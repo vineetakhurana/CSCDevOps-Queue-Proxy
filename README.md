@@ -31,7 +31,7 @@ Access *localhost:3002/get* to see the value expired.
 ##RECENT
 
 Use of 'lpush' to push the request's URL to a queue and 'lrange' to get the 5 most recently visited URLs on localhost:3002.
-Access *localhost:3002/recent* which displays the 5 most recently visited sites.
+*localhost:3002/recent* displays the 5 most recently visited sites.
 
 ![recent] [recent]
 
@@ -39,6 +39,7 @@ Access *localhost:3002/recent* which displays the 5 most recently visited sites.
 
 ##upload
 The *curl* command used as per Workshop README to upload an image. 'i-scream.jpg' is uploaded followed by 'morning.jpg'.
+
 ![curl] [curl]
 
 Use of 'rpush' to push all the images uploaded to a queue. 
