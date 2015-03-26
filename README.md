@@ -22,7 +22,7 @@ Access *localhost:3002/get* to see the output as *This message will self-destruc
 
 Set an expiration time for the key "two", in this case 10seconds.
 Send a get request with key "two".
-Access localhost/get to see the value expired.
+Access *localhost:3002/get* to see the value expired.
 
 ![expire] [expire]
 
