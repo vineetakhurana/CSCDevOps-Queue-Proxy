@@ -28,12 +28,12 @@ Access *localhost:3002/recent* which displays the 5 most recently visited sites.
 
 ##UPLOAD and MEOW
 
-###Upload
+##upload
 The *curl* command used as per Workshop README to upload an image
 
 Use of 'rpush' to push all the images uploaded to a queue. 
 
-###Meow
+###meow
 'rpoplpush' command used to pop and hence remove the most recent image from the uploads queue onto another queue, used to display the image on accessing *localhost:3002/meow*
 
 'lrange' command used to access the recent-most image in the destination queue in order to display the image on accessing *localhost:3002/meow*
