@@ -16,9 +16,9 @@ Send a get request with key "two"
 
 ![settwo] [set_two]
 
-![gettwo] [get_two]
-
 Access *localhost:3002/get* to see the output as *This message will self-destruct in 10 seconds*
+
+![gettwo] [get_two]
 
 Set an expiration time for the key "two", in this case 10seconds
 Send a get request with key "two"
