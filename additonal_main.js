@@ -157,7 +157,7 @@ app.post('/upload',[ multer({ dest: './uploads/'}), function(req, res){
 
 
 // HTTP SERVER
-var server = app.listen(3002, function () {
+var server = app.listen(3001, function () {
 
 var host = server.address().address
 var port = server.address().port
