@@ -4,9 +4,12 @@ The application is **main.js** I have set the server instance to listen on **loc
 
 Set key "one" to value "vineeta"
 Send a get request with key "one"
-Access *localhost:3002/get* to see output as *vineeta*
 
 ![setone] [set_one]
+
+Access *localhost:3002/get* to see output as *vineeta*
+
+![getone] [get_one]
 
 Set key "two" to value "This message will self-destruct in 10 seconds"
 Send a get request with key "two"
@@ -47,3 +50,16 @@ Hence the requests to localhost are redirected to *localhost:3001* and *localhos
 
 
 [set_one]: /images/get_one.PNG
+[get_one]: /images/one_vineeta.PNG
+[expire]: /images/expire.PNG
+[after_expire]: /images/get_after_expire.PNG
+[set_two]: /images/set_two.PNG
+[get_two]: /images/get_two.PNG
+[recent]: /images/recent.PNG
+[curl]: /images/curl.PNG
+[meow]: /images/meow.PNG
+[meow2]: /images/meow2.PNG
+[additional]: /images/additionalinstance.PNG
+[3001]: /images/3001.PNG
+[proxy]: /images/proxy.PNG
+[proxy2]: /images/proxy_console.PNG
