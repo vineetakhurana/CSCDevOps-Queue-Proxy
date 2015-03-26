@@ -6,6 +6,8 @@ Set key "one" to value "vineeta"
 Send a get request with key "one"
 Access *localhost:3002/get* to see output as *vineeta*
 
+![set_one] [get_one.png]
+
 Set key "two" to value "This message will self-destruct in 10 seconds"
 Send a get request with key "two"
 Access *localhost:3002/get* to see the output as *This message will self-destruct in 10 seconds*
