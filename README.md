@@ -38,7 +38,7 @@ Use of 'rpush' to push all the images uploaded to a queue.
 
 'lrange' command used to access the recent-most image in the destination queue in order to display the image on accessing *localhost:3002/meow*
 
-##Additional service instance running
+##ADDITIONAL SERVER INSTANCE RUNNING
 
 I have another server instance running on port 3001 accessible using **localhost:3001**. 
 
