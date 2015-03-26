@@ -11,7 +11,7 @@ Access *localhost:3002/get* to see output as *vineeta*
 
 ![getone] [get_one]
 
-Set key "two" to value "This message will self-destruct in 10 seconds"
+Set key "two" to value "This message will self-destruct in 10 seconds".
 Send a get request with key "two"
 
 ![settwo] [set_two]
