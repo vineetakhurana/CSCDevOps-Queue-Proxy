@@ -46,4 +46,4 @@ Hence the requests to localhost are redirected to *localhost:3001* and *localhos
 
 
 
-[set_one]: images/get_one.png
+[set_one]: /images/get_one.PNG
