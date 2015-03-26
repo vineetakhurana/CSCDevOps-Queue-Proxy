@@ -49,7 +49,7 @@ Use of 'rpush' to push all the images uploaded to a queue.
 
 'lrange' command used to access the recent-most image in the destination queue in order to display the image on accessing *localhost:3002/meow*.
 
-This fetches the most recent image i.e. 'morning.jpg' in the first access to */meow* and later 'i-scream.jpg' for a subsequent request to */meow*.
+This fetches the most recent image i.e. 'morning.jpg' in the first request to */meow* and later 'i-scream.jpg' for a subsequent request to */meow*.
 
 ![meow] [meow]
 
@@ -66,7 +66,7 @@ I replicated the functionality of main.js in **additional_main.js** and set the 
 
 ###DEMONSTRATE PROXY
 
-**proxy.js**: It has the code for shifting load between localhost:3001 and localhost:3002 when a request is sent to *localhost*.
+**proxy.js**: It has the code for shifting load between *localhost:3001* and *localhost:3002* when a request is sent to *localhost*.
 
 On each request, obtain target location from the list of addresses and proxy to the relevant server,who is then placed at the end of the list.
 Hence the requests to localhost are redirected to *localhost:3001* and *localhost:3002* by a simple round-robin load balancing strategy.
