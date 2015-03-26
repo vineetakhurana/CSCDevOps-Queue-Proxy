@@ -6,7 +6,7 @@ Set key "one" to value "vineeta"
 Send a get request with key "one"
 Access *localhost:3002/get* to see output as *vineeta*
 
-![setone] [get_one.png]
+![setone] [set_one]
 
 Set key "two" to value "This message will self-destruct in 10 seconds"
 Send a get request with key "two"
@@ -46,4 +46,4 @@ Hence the requests to localhost are redirected to *localhost:3001* and *localhos
 
 
 
-[setone]: images/get_one.png
+[set_one]: images/get_one.png
