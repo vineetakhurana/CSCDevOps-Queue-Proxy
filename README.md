@@ -44,3 +44,8 @@ I have another server instance running on port 3001 accessible using **localhost
 
 I replicated the functionality of main.js in **additional_main.js** and set the server to run on port 3001.
 
+###DEMONSTRATE PROXY
+
+**proxy.js**: It has the code for shifting load between localhost:3001 and localhost:3002 when a request is sent to *localhost*
+Hence the requests to localhost are distributed between localhost:3001 and localhost:3002
+
