@@ -16,11 +16,11 @@ var client = redis.createClient(REDIS_PORT, '127.0.0.1', {})
 
 var x;
 var set_val;
-var visited = " ";
+var visited = []];
 var toSend = [];
-var items = args[2];
+var items = [];
 var meowItems = [];
-var otherArray = [];
+var otherArray = args[2];
 var display = [];
 
 // //set and get
