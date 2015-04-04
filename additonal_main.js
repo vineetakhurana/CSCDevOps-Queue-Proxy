@@ -7,10 +7,6 @@ var app = express()
 var args = process.argv.slice(2);
 var PORT = args[0];
 
-
-// var http = require('http'),
-// httpProxy = require('http-proxy');
-
 // REDIS
 var client = redis.createClient(6379, '127.0.0.1', {})
 
