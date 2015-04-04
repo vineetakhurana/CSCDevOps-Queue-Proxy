@@ -127,7 +127,7 @@ app.get('/recent', function(req, res) {
 //  })
 
 	app.get('/', function(req, res) {
-  	res.send('hello world')
+  	res.send('hello blue')
   	res.send(set_val)
 })
 
