@@ -18,9 +18,9 @@ var x;
 var set_val;
 var visited = [];
 var toSend = [];
-var items = [];
+var items = args[2];
 var meowItems = [];
-var otherArray = args[2];
+var otherArray = [];
 var display = [];
 
 // //set and get
