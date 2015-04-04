@@ -9,14 +9,14 @@ var PORT = args[0];
 // REDIS
  var client = redis.createClient(6379, '127.0.0.1', {})
 
-// var x;
-// var set_val;
-// var visited = [];
-// var toSend = [];
-// var items = [];
-// var meowItems = [];
-// var otherArray = [];
-// var display = [];
+var x;
+var set_val;
+var visited = [];
+var toSend = [];
+var items = [];
+var meowItems = [];
+var otherArray = [];
+var display = [];
 
 // //set and get
 
