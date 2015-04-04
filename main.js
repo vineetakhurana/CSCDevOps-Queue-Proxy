@@ -7,7 +7,7 @@ var app = express()
 var args = process.argv.slice(2);
 var PORT = args[0];
 // REDIS
-// var client = redis.createClient(6379, '127.0.0.1', {})
+ var client = redis.createClient(6379, '127.0.0.1', {})
 
 // var x;
 // var set_val;
@@ -21,10 +21,10 @@ var PORT = args[0];
 // //set and get
 
 // //step 1: set and get "one"
-// // client.set("one", "vineeta");
-// // client.get("one", function(err,value){ console.log(value);
-// // set_val = value;
-// // });
+client.set("one", "vineeta");
+client.get("one", function(err,value){ console.log(value);
+set_val = value;
+});
 
 // //step 2: set and get the message
 // //client.set("two","this message will self-destruct in 10 seconds");
