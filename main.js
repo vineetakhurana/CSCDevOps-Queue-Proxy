@@ -7,7 +7,8 @@ var app = express()
 var args = process.argv.slice(2);
 var PORT = args[0];
 // REDIS
- var client = redis.createClient(6379, '127.0.0.1', {})
+//var client = redis.createClient(6379, '127.0.0.1', {})
+var client = args[1]
 
 var x;
 var set_val;
@@ -77,54 +78,54 @@ app.get('/recent', function(req, res) {
 // //step 5: upload images using curl command
 // //step 6: push the images to a queue 
 
-// app.post('/upload',[ multer({ dest: './uploads/'}), function(req, res){
+app.post('/upload',[ multer({ dest: './uploads/'}), function(req, res){
   
 
-//    if( req.files.image )
-//    {
-//    		//var name = req.files.image.name
-// 	   fs.readFile( req.files.image.path, function (err, data) {
-// 	  		if (err) throw err;
-// 	  		var img = new Buffer(data).toString('base64');
+   if( req.files.image )
+   {
+   		//var name = req.files.image.name
+	   fs.readFile( req.files.image.path, function (err, data) {
+	  		if (err) throw err;
+	  		var img = new Buffer(data).toString('base64');
 	  		
-// 	   client.rpush(items,img,function(err,reply){
+	   client.rpush(items,img,function(err,reply){
 
-// 	    });
+	    });
 
-// 	});
+	});
 	   
-// 	}
+	}
 	
 
-//    res.status(204).end()
-// }]);
+   res.status(204).end()
+}]);
 
 
-// //step 7: pop the most recent image and display on /meow
-//  app.get('/meow', function(req, res) {
+//step 7: pop the most recent image and display on /meow
+ app.get('/meow', function(req, res) {
 
 
-// 		client.rpoplpush(items,otherArray, function(err,reply){
+		client.rpoplpush(items,otherArray, function(err,reply){
 
-// 	    });
+	    });
 
-// 		client.lrange(otherArray, 0, 0 , function(err,reply){
+		client.lrange(otherArray, 0, 0 , function(err,reply){
 
-// 	    		display = reply
-// 	    }); 
+	    		display = reply
+	    }); 
 	
-// 		 res.writeHead(200, {'content-type':'text/html'});
-// 		 display.forEach(function(imagedata)
-// 		 {
+		 res.writeHead(200, {'content-type':'text/html'});
+		 display.forEach(function(imagedata)
+		 {
 
 		
-//    		res.write("<h1>\n<img src='data:image/jpg;base64,"+imagedata+"'/>");
+   		res.write("<h1>\n<img src='data:image/jpg;base64,"+imagedata+"'/>");
    		
-// 		});
-//    	res.end();
+		});
+   	res.end();
 
-// 	}
-//  })
+	}
+ })
 
 	app.get('/', function(req, res) {
   	res.send('hello blue')
