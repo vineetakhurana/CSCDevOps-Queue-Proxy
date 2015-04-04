@@ -8,7 +8,8 @@ var args = process.argv.slice(3);
 var PORT = args[0];
 // REDIS
 //var client = redis.createClient(6379, '127.0.0.1', {})
-var client = args[1]
+var REDIS_PORT = args[1]
+var client = redis.createClient(REDIS_PORT, '127.0.0.1', {})
 
 var x;
 var set_val;
