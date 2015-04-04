@@ -12,9 +12,11 @@ var REDIS_PORT = args[1];
 console.log(REDIS_PORT)
 var client = redis.createClient(REDIS_PORT, '127.0.0.1', {})
 
+
+
 var x;
 var set_val;
-var visited = [];
+var visited = args[2];
 var toSend = [];
 var items = [];
 var meowItems = [];
@@ -29,7 +31,7 @@ client.get("one", function(err,value){ console.log(value);
 set_val = value;
 });
 
-client.set(visited," ");
+//client.set(visited, );
 
 // //step 2: set and get the message
 // //client.set("two","this message will self-destruct in 10 seconds");
