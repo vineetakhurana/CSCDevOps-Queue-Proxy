@@ -41,33 +41,33 @@ set_val = value;
 // //step 4: do lpush , lrange to get last 5 visited pages
 
 // // Add hook to make it easier to get all visited URLS.
-// app.use(function(req, res, next) 
-// {
-// 	console.log(req.method, req.url); //--print this
-// 	// ... INSERT HERE.
-// 	//lpush, ltrim, lrange
+app.use(function(req, res, next) 
+{
+	console.log(req.method, req.url); //--print this
+	// ... INSERT HERE.
+	//lpush, ltrim, lrange
 
-//  	client.lpush(visited,req.url,function(err,reply){
+ 	client.lpush(visited,req.url,function(err,reply){
 
-// 		console.log(reply); //--print this
+		console.log(reply); //--print this
 		
-//  	});
+ 	});
 
-//  	client.lrange(visited, 0,4,function(err,reply){
+ 	client.lrange(visited, 0,4,function(err,reply){
 
-// 		console.log("lrange:",reply); //--print this
-// 		toSend = reply //impt
+		console.log("lrange:",reply); //--print this
+		toSend = reply //impt
 
-// 	});
+	});
 
-// 	next(); // Passing the request to the next handler in the stack.
-//  });
+	next(); // Passing the request to the next handler in the stack.
+ });
 
 
-// app.get('/recent', function(req, res) {
-//   res.send(toSend)
+app.get('/recent', function(req, res) {
+  res.send(toSend)
   
-// })
+})
 
 // app.get('/get',function(req,res){
 
