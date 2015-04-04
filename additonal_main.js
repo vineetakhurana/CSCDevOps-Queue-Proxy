@@ -4,6 +4,10 @@ var express = require('express')
 var fs      = require('fs')
 var app = express()
 
+var args = process.argv.slice(2);
+var PORT = args[0];
+
+
 // var http = require('http'),
 // httpProxy = require('http-proxy');
 
@@ -120,12 +124,12 @@ app.get('/recent', function(req, res) {
 
 
 // HTTP SERVER
-var server = app.listen(3001, function () {
+var server = app.listen(PORT, function () {
 
-var host = server.address().address
-var port = server.address().port
+	var host = server.address().address
+	var port = server.address().port
 
-  console.log('Example app listening at http://%s:%s', host, port)
-})
+	console.log('Example app listening at http://%s:%s', host, port)
+});
 
 
