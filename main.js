@@ -29,6 +29,8 @@ client.get("one", function(err,value){ console.log(value);
 set_val = value;
 });
 
+client.set(visited," ");
+
 // //step 2: set and get the message
 // //client.set("two","this message will self-destruct in 10 seconds");
 // //step 3: expire this message and get
