@@ -54,7 +54,7 @@ app.use(function(req, res, next)
 	// ... INSERT HERE.
 	//lpush, ltrim, lrange
 
- 	client.lpush(['visited',req.url],function(err,reply){
+ 	client.lpush([visited,req.url],function(err,reply){
 
 		console.log(reply); //--print this
 		
