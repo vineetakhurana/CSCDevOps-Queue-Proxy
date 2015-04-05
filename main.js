@@ -132,7 +132,7 @@ app.post('/upload',[ multer({ dest: './uploads/'}), function(req, res){
 	})
 
 	app.get('/', function(req, res) {
-  	res.send('hello blue')
+  	res.send('hello blue here')
   	res.send(set_val)
 })
 
