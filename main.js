@@ -54,13 +54,13 @@ app.use(function(req, res, next)
 	// ... INSERT HERE.
 	//lpush, ltrim, lrange
 
- 	client.lpush([visited,req.url],function(err,reply){
+ 	client.lpush(['visited',req.url],function(err,reply){
 
 		console.log(reply); //--print this
 		
  	});
 
- 	client.lrange(visited, 0,4,function(err,reply){
+ 	client.lrange('visited', 0,4,function(err,reply){
 
 		console.log("lrange:",reply); //--print this
 		toSend = reply //impt
