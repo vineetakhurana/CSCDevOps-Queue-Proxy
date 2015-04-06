@@ -20,7 +20,7 @@ var set_val;
 var toSend = [];
 //var items = args[2];
 var meowItems = [];
-var otherArray = [];
+//var otherArray = [];
 var display = [];
 
 // //set and get
@@ -111,12 +111,12 @@ app.post('/upload',[ multer({ dest: './uploads/'}), function(req, res){
  app.get('/meow', function(req, res) {
 
 
-		client.rpoplpush('items', otherArray, function(err,reply){
+		client.rpoplpush('items', 'otherArray', function(err,reply){
 
 	    });
 
 
-		client.lrange(otherArray, 0, 0 , function(err,reply){
+		client.lrange('otherArray', 0, 0 , function(err,reply){
 
 	    		display = reply
 	    }); 
