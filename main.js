@@ -9,9 +9,8 @@ var PORT = args[0];
 // REDIS
 //var client = redis.createClient(6379, '127.0.0.1', {})
 var REDIS_PORT = args[1];
-console.log(REDIS_PORT)
-var client = redis.createClient(REDIS_PORT, '127.0.0.1', {})
-
+//console.log(REDIS_PORT)
+var client = REDIS_PORT
 
 
 var x;
@@ -114,7 +113,6 @@ app.post('/upload',[ multer({ dest: './uploads/'}), function(req, res){
 		client.rpoplpush('items', 'otherArray', function(err,reply){
 
 	    });
-
 
 		client.lrange('otherArray', 0, 0 , function(err,reply){
 
