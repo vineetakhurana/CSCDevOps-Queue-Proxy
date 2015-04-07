@@ -5,12 +5,12 @@ var fs      = require('fs')
 var app = express()
 
 var args = process.argv.slice(2);
-var PORT = args[0];
+var PORT = args[0]; //changed for Homework4
 // REDIS
-//var client = redis.createClient(6379, '127.0.0.1', {})
-var REDIS_PORT = args[1];
+//var client = redis.createClient(6379, '127.0.0.1', {}) 
+var REDIS_PORT = args[1]; //changed for Homework4
 //console.log(REDIS_PORT)
-var client = redis.createClient(REDIS_PORT, '127.0.0.1', {})
+var client = redis.createClient(REDIS_PORT, '127.0.0.1', {}) //changed for Homework4
 
 
 
@@ -132,13 +132,13 @@ app.post('/upload',[ multer({ dest: './uploads/'}), function(req, res){
 	})
 
 	app.get('/', function(req, res) {
-  	res.send('hello green here please help')
+  	res.send('hello world')
   	res.send(set_val)
 })
 
 
 // HTTP SERVER
-var server = app.listen(PORT, function () {
+var server = app.listen(PORT, function () { //changed for Homework4
 
 var host = server.address().address
 var port = server.address().port
